@@ -20,12 +20,12 @@ namespace DesafioFundamentos.Models
             string placa = Console.ReadLine();
             veiculos.Add(placa); 
 
-            // *Verifica se a placa informada já está estacionada, no caso de ter sido clonada.*
+            // *Verifica se já existe uma placa cadastrada com o mesmo nome*
 
             if (veiculos.Contains(placa)) 
             {
 
-                Console.WriteLine("Este veículo já está estacionado!");
+                Console.WriteLine("Esta placa já está cadastrada!");
             }
             else 
             {

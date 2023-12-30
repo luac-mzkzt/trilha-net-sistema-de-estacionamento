@@ -18,19 +18,7 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine();
             veiculos.Add(placa); 
-
-            // *Verifica se já existe uma placa cadastrada com o mesmo nome*
-
-            if (veiculos.Contains(placa)) 
-            {
-
-                Console.WriteLine("Esta placa já está cadastrada!");
-            }
-            else 
-            {
-                Console.WriteLine("Veículo estacionado com sucesso!");
-            }
-       
+            
         }
 
         public void RemoverVeiculo()

@@ -2,14 +2,24 @@ namespace DesafioFundamentos.Models
 {
     public class Estacionamento
     {
-        private decimal precoInicial = 0;
-        private decimal precoPorHora = 0;
+        private decimal? precoInicial = null;
+        private decimal? precoPorHora = null;
         private List<string> veiculos = new List<string>();
 
-        public Estacionamento(decimal precoInicial, decimal precoPorHora)
+        public Estacionamento(decimal? precoInicial, decimal? precoPorHora)
         {
             this.precoInicial = precoInicial;
             this.precoPorHora = precoPorHora;
+
+            if (precoInicial == null || precoInicial < 0)
+            {
+                throw new ArgumentException("Preço inicial inválido!");
+            }
+
+            if (precoPorHora == null || precoPorHora < 0)
+            {
+                throw new ArgumentException("Preço por hora inválido!");
+            }
         }
 
         public void AdicionarVeiculo()
